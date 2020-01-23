@@ -6,6 +6,8 @@ class TsumTsumMemoryMatch{
     }
     loadPage(){
         this.loadHeader();
+        this.loadBody();
+        this.loadFooter();
     }
     loadHeader(){
         var liLeaderBoard = $("<li>")
@@ -23,5 +25,19 @@ class TsumTsumMemoryMatch{
                         .append(liHome,liLeaderBoard);
 
         ulHeader.appendTo(this.dom.container);
+    }
+    loadBody(){
+        var bodyElement = $("<div>")
+                        .attr('id','bodyElement')
+                        .addClass('bodyElement')
+
+        bodyElement.appendTo(this.dom.container);
+    }
+    loadFooter(){
+        var footerElement = $("<div>")
+                        .attr('id','footerElement')
+                        .addClass('footerElement');
+
+        footerElement.appendTo(this.dom.container);
     }
 }
