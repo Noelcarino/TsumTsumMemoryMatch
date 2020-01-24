@@ -35,6 +35,21 @@ class LeaderBoard {
                 userName: "Tsum Addict",
                 tsumMatched: "931",
                 dateCleared: "12/22/2019"
+            },
+            {
+                userName: "Tsum Addict",
+                tsumMatched: "931",
+                dateCleared: "12/22/2019"
+            },
+            {
+                userName: "Tsum Addict",
+                tsumMatched: "931",
+                dateCleared: "12/22/2019"
+            },
+            {
+                userName: "Tsum Addict",
+                tsumMatched: "931",
+                dateCleared: "12/22/2019"
             }
         ];
     }
