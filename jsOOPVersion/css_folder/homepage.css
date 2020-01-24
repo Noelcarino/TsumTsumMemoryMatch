@@ -1,6 +1,7 @@
 #startButton{
     padding: 15px 18px;
     background-color: red;
+    font-size: 45px;
     color: white;
     margin: auto;
     display: none;

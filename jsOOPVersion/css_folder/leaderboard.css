@@ -1,11 +1,18 @@
 /* 
     LEADERBOARD
 */
-
+table {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
 th {
     border: 1px solid black;
     text-align: center;
     width: 5%;
+}
+tr:nth-child(n+2){
+    height: 150px
 }
 tr:hover{
     transition: 0.001s;
@@ -13,6 +20,7 @@ tr:hover{
     color: white;
 }
 td {
+    height: 25px;
     padding: 1% 0;
 }
 td:nth-child(2):hover{

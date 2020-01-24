@@ -10,11 +10,14 @@ class StartGame{
         startButton.appendTo("#bodyRenderStage")
 
         if ($("#startButton").is(":hidden")){
-            console.log("hello");
             $("#startButton").slideDown("slow");
-
-        } else {
-            console.log("not hidden");
-        }
+        } 
+        this.startgame();
+    }
+    startgame(){
+        $('#startButton').click(function(){
+            console.log("started");
+            $("#startButton").hide();
+        })
     }
 }
