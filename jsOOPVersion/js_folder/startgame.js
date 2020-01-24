@@ -6,6 +6,7 @@ class StartGame{
         }
         this.startgame = this.startgame.bind(this);
         this.loadCards = this.loadCards.bind(this);
+        this.handleCardClick = this.handleCardClick.bind(this);
     }
     loadStartButton(){
         console.log("button being loaded");
@@ -35,17 +36,21 @@ class StartGame{
 
         var card; 
         
-        for (var i = 0; i <12; i++){
+        for (var i = 0; i < 12; i++){
 
             card = $("<div>")
-                .attr('id', i)
+                .attr('id', "card-" + i)
                 .addClass("card");
             card.appendTo(bodyRenderStage);
+            $("#card-"+i).on('click',this.handleCardClick);
 
         }
-       
 
 
-        console.log("cards loaded");
+    }
+    handleCardClick(event){
+
+
+        console.log(event.target.id.slice(5));
     }
 }
