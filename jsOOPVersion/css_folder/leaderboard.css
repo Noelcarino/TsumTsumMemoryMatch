@@ -1,5 +1,13 @@
+/* 
+    LEADERBOARD
+*/
+
+th {
+    border: 1px solid black;
+    text-align: center;
+    width: 5%;
+}
 #tableLeaderBoard {
     margin: auto;
-    background-color: black;
-    color: white;
+    font-size: 16px;
 }
