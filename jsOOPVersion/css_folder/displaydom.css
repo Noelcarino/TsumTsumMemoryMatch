@@ -55,8 +55,12 @@ body {
     margin: 0 auto;
     padding: 5% auto;
     border: 1px solid black;
-    background-color: white;
+    /* background-color: white; */
+    background-image: url('/jsOOPVersion/images/bluebackground.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
+    flex-wrap: wrap;
     overflow: scroll;
 }
 /************* 
