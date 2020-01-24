@@ -7,7 +7,9 @@ class EventListeners{
         this.navBinders();
     }
     loadHomePage(){
-        console.log("You have loaded Home Page");
+        var loadStartButton;
+        loadStartButton = new StartGame();
+        loadStartButton.loadStartButton();
     }
     loadLeaderBoard(){
         var leaderBoard;

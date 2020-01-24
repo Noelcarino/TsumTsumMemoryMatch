@@ -1,0 +1,11 @@
+#startButton{
+    padding: 15px 18px;
+    background-color: red;
+    color: white;
+    margin: auto;
+    display: none;
+}
+
+/* .hidden {
+    display: none;
+} */
