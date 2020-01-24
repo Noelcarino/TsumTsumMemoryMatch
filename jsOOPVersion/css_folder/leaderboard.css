@@ -7,6 +7,23 @@ th {
     text-align: center;
     width: 5%;
 }
+tr:hover{
+    transition: 0.001s;
+    background-color: black;
+    color: white;
+}
+td {
+    padding: 1% 0;
+}
+td:nth-child(2):hover{
+    color: yellow;
+}
+td:nth-child(2){
+    text-align: center;;
+}
+td:nth-child(3){
+    text-align: center;
+}
 #tableLeaderBoard {
     margin: auto;
     font-size: 16px;
