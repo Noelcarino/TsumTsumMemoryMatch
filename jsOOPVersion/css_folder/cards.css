@@ -1,0 +1,29 @@
+/*****************
+    CARD LIBRARY
+******************/
+
+.card-1 {
+    background-image: url('../images/memorymatchmickey.png');
+    /* background-size: 100% 100%; */
+    background-size:cover;
+}
+.card-2 {
+    background-image: url('../images/memorymatchminnie.png');
+    background-size: 100% 100%;
+}
+.card-3 {
+    background-image: url('../images/memorymatchdonald.png');
+    background-size: 100% 100%;
+}
+.card-4 {
+    background-image: url('../images/memorymatchdaisy.png');
+    background-size: 100% 100%;
+}
+.card-5 {
+    background-image: url('../images/memorymatchgoofy.png');
+    background-size: 100% 100%;
+}
+.card-6 {
+    background-image: url('../images/memorymatchpluto.png');
+    background-size: 100% 100%;
+}
