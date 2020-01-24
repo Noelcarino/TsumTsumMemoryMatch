@@ -4,6 +4,8 @@ class StartGame{
             gameStarted: false,
             cardsLoaded: false,
         }
+        this.firstCardClicked = null;
+        this.secondCardClicked = null;
         this.startgame = this.startgame.bind(this);
         this.loadCards = this.loadCards.bind(this);
         this.handleCardClick = this.handleCardClick.bind(this);
@@ -50,7 +52,25 @@ class StartGame{
     }
     handleCardClick(event){
 
+        if (this.firstCardClicked === null){
+            this.firstCardClicked = event.target.id.slice(5);
+            console.log('1 - ', this.firstCardClicked);
+            return;
+        }
+        if (event.target.id.slice(5) === this.firstCardClicked){
+            console.log("You clicked this card already!");
+            return;
+        }
+        if (this.secondCardClicked === null){
+            this.secondCardClicked = event.target.id.slice(5);
+            console.log('2 - ', this.secondCardClicked)
+        }
 
-        console.log(event.target.id.slice(5));
+        if (this.firstCardClicked !== null && this.secondCardClicked !== null){
+            console.log (this.firstCardClicked + " " + this.secondCardClicked);
+            this.firstCardClicked = null;
+            this.secondCardClicked = null;
+            return;
+        }
     }
 }
