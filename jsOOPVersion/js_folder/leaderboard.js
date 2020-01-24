@@ -37,9 +37,6 @@ class LeaderBoard {
                 dateCleared: "12/22/2019"
             }
         ];
-        this.loadData = this.loadData.bind(this);
-        this.loadLeaderBoard = this.createTable.bind(this);
-        this.createTable = this.createTable.bind(this);
     }
     loadLeaderBoard(){
         this.createTable();
@@ -81,6 +78,7 @@ class LeaderBoard {
                         .text(param.tsumMatched);
         var td1 = $("<td>")
                         .text(param.userName);
+
         var trData = $("<tr>")
                         .append(td1,td2,td3);
 
