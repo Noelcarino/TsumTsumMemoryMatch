@@ -14,8 +14,8 @@
 } */
 
 .card {
-    height: 100px;
-    width: 100px;
+    height: 125px;
+    width: 125px;
     background-color: red;
     border: 1px solid black;
 }
