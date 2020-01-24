@@ -1,11 +1,15 @@
 class StartGame{
+    constructor(){
+        this.startgame = this.startgame.bind(this);
+        this.loadCards = this.loadCards.bind(this);
+    }
     loadStartButton(){
         console.log("button being loaded");
 
 
         var startButton = $("<button>")
                             .attr('id','startButton')
-                            .text("start game");
+                            .text("START");
         
         startButton.appendTo("#bodyRenderStage")
 
@@ -15,9 +19,14 @@ class StartGame{
         this.startgame();
     }
     startgame(){
+
         $('#startButton').click(function(){
-            console.log("started");
             $("#startButton").hide();
         })
+        $("#startButton").click(this.loadCards);
+
+    }
+    loadCards(){
+        console.log("cards loaded");
     }
 }
