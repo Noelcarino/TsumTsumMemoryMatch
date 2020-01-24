@@ -27,9 +27,12 @@ class TsumTsumMemoryMatch{
         ulHeader.appendTo(this.dom.container);
     }
     loadBody(){
+        var bodyRenderStage = $("<div>")
+                        .attr('id','bodyRenderStage');
         var bodyElement = $("<div>")
                         .attr('id','bodyElement')
                         .addClass('bodyElement')
+                        .append(bodyRenderStage);
 
         bodyElement.appendTo(this.dom.container);
     }
