@@ -5,9 +5,11 @@ class StartGame{
             cardsLoaded: false,
         }
         this.card10Clicked = 10;
-        this.cardArray = [1,1,2,2,3,3,4,4,5,6];
+        this.cardArray = [1,1,2,2,3,3,4,4,5,5,6,6];
         this.firstCardClicked = null;
         this.secondCardClicked = null;
+        this.firstIdCheck = null;
+        this.secondIdCheck = null;
         this.startgame = this.startgame.bind(this);
         this.loadCards = this.loadCards.bind(this);
         this.handleCardClick = this.handleCardClick.bind(this);
@@ -35,7 +37,7 @@ class StartGame{
     }
     loadCards(param){
         this.shuffle(this.cardArray);
-        console.log()
+        console.log(this.cardArray)
         var bodyRenderStage = $("#bodyRenderStage")
         var card; 
         if (this.card10Clicked === 30){
@@ -48,10 +50,9 @@ class StartGame{
         for (var i = 0; i < this.cardArray.length; i++){
             card = $("<div>")
                 .attr('id', "card-" + i)
-                .text(i)
-                .addClass("card" + " card-" + this.cardArray[i]);
-            card.appendTo(bodyRenderStage);
-            $("#card-"+i).on('click',this.handleCardClick);
+                .addClass("card" + " card-" + this.cardArray[i])
+                .appendTo(bodyRenderStage)
+                .on('click',this.handleCardClick);
         }
 
     }
@@ -63,19 +64,32 @@ class StartGame{
         //     this.loadCards(true);
         //     return;
         // }
-
         if (this.firstCardClicked === null){
-            this.firstCardClicked = event.target.id.slice(5);
+            this.firstCardClicked = event.target.className.slice(10);
+            this.firstIdCheck = event.target.id.slice(5);
             return;
         }
-        if (event.target.id.slice(5) === this.firstCardClicked){
+        if (event.target.id.slice(5) === this.firstIdCheck){
             console.log("You clicked this card already!");
             return;
         }
         if (this.secondCardClicked === null){
-            this.secondCardClicked = event.target.id.slice(5);
+            this.secondCardClicked = event.target.className.slice(10);
+            this.secondIdCheck = event.target.id.slice(5);
         }
-
+        if (this.firstCardClicked !== this.secondCardClicked){
+            console.log("NOT A MATCH");
+            this.firstCardClicked = null;
+            this.secondCardClicked = null;
+            this.firstIdCheck = null;
+            this.secondIdCheck = null;
+            return;
+        }
+        if (this.firstCardClicked === this.secondCardClicked){
+            console.log("MATCHED");
+            this.firstCardClicked = null;
+            this.secondCardClicked = null;
+        }
         if (this.firstCardClicked !== null && this.secondCardClicked !== null){
             this.firstCardClicked = null;
             this.secondCardClicked = null;
