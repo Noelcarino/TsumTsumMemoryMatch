@@ -4,8 +4,7 @@
 
 .card-1 {
     background-image: url('../images/memorymatchmickey.png');
-    /* background-size: 100% 100%; */
-    background-size:cover;
+    background-size: 100% 100%;
 }
 .card-2 {
     background-image: url('../images/memorymatchminnie.png');
